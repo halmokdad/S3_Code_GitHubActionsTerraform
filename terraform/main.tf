@@ -81,8 +81,8 @@ resource "null_resource" "link_monitoring" {
       // Parameters needed for linking
       inst_key          = TODO
       conn_str          = TODO      
-      rg_name           = TODO
-      web_app_name      = TODO
+      rg_name           = var.rg_name
+      web_app_name      = var.web_app_name
     }
   }
 }

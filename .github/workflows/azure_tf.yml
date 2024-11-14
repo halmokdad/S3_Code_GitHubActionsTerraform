@@ -48,6 +48,11 @@ jobs:
         echo "${{ secrets.ASP }}" | sed -r 's#(.)#\1 #g'
         echo "${{ secrets.WEBAPP }}" | sed -r 's#(.)#\1 #g'
         echo "${{ secrets.LOC }}" | sed -r 's#(.)#\1 #g'
+        echo "${{ secrets.AZURE_AD_CLIENT_ID }}" | sed -r 's#(.)#\1 #g'
+        echo "${{ secrets.AZURE_AD_CLIENT_SECRET }}" | sed -r 's#(.)#\1 #g'
+        echo "${{ secrets.AZURE_SUBSCRIPTION_ID }}" | sed -r 's#(.)#\1 #g'
+        echo "${{ secrets.AZURE_AD_TENANT_ID }}" | sed -r 's#(.)#\1 #g'
+        echo "${{ secrets.RG }}" | sed -r 's#(.)#\1 #g'
 
     - uses: hashicorp/setup-terraform@v2
 

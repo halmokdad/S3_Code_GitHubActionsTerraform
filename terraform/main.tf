@@ -75,12 +75,12 @@ resource "null_resource" "link_monitoring" {
     EOT
     environment = {
       // Parameters needed to login
-      con_client_id     = TODO
-      con_client_secret = TODO
-      con_tenant_id     = TODO
+      con_client_id     = var.client_id
+      con_client_secret = var.client_secret
+      con_tenant_id     = var.tenant_id
       // Parameters needed for linking
-      inst_key          = TODO
-      conn_str          = TODO      
+      inst_key          = azurerm_application_insights.appi.instrumentation_key
+      conn_str          = azurerm_application_insights.appi.connection_string      
       rg_name           = var.rg_name
       web_app_name      = var.web_app_name
     }
